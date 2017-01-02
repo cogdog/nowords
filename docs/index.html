@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+	<title>Words With No English Equivalents</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="style.css" type="text/css" />	
+	
+
+	<script type="text/javascript">
+		
+		// create an array for the words
+		var wordBox = new Array( 'Entrecejo', 'Concuñado', 'Merendar', 'Te Quiero', 'Friolento', 'Desvelado', 'Anteayer', 'Sobremesa', 'Empalagar', 'Kuddelmiddel', 'Drachenfutter', 'Geborgenheit', 'Zugzwang', 'Verschlimmbessern', 'Kopfkino', 'Fremdschaemen', 'Sehnsucht', 'Frühjahrsmüdigkeit', 'Fingerspitzengefühl', 'Weltschmerz', 'Luftschloss', 'Treppenwitz', 'Fernweh', 'Torschlusspanik', 'Zhaghzhagh', 'Yuputka', 'Slampadato', 'Luftmensch', 'Iktsuarpok', 'Cotisuelto', 'Pana Po\'o', 'Gumusservi', 'Vybafnout', 'Mencolek', 'Faamiti', 'Glas wen', 'Bakku-shan', 'Boketto', 'Kummerspeck', 'Dépaysement', 'La douleur exquise', 'Esprit d\'escalier', 'Retrouvailles', 'Empêchement', 'Toska', 'Mamihlapinatapei', 'Jayus', 'Iktsuarpok', 'Kyoikumama', 'Tartle', 'Ilunga', 'Prozvonit', 'Cafuné', 'Schadenfreude', 'Wabi-Sabi', 'Tingo', 'Ya\'aburnee', 'Saudade', 'Uitwaaien', 'Zalatwic', 'Biritululo', 'Naamgenoot', 'Gezelligheid', 'Viitsima', 'Hiraeth', 'Litost', 'Tsundoku', 'Pochemuchka', 'Friolero', 'Fernweh', 'Papakata', 'Waldeinsamkeit', 'Hanyauku', 'Utepils', 'Waldeinsamkeit', 'Culaccino', 'Komorebi', 'Sobremesa', 'Jayus', 'Goya', 'Mångata', 'Mahmihlapinatapai', 'Gurfa', 'Poronkusema', 'Drachenfutter');
+		
+		// language the word comes from
+		var langBox=new Array( 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'Spanish', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'German', 'Persian', 'Ulwa', 'Italian', 'Yiddish', 'Inuit', 'Caribbean Spanish', 'Hawaiian', 'Turkish', 'Czech', 'Indonesian', 'Samoan', 'Welsh', 'Japanese', 'Japanese', 'German', 'French', 'French', 'French', 'French', 'French', 'Russian', 'Yagan', 'Indonesian', 'Inuit', 'Japanese', 'Scottish', 'Bantu', 'Czech', 'Brazilian Portuguese', 'German loanword', 'Japanese', 'Easter island', 'Arabic', 'Portuguese', 'Dutch', 'Polish', 'New Guinea', 'Dutch', 'Dutch', 'Estonia', 'Welse', 'Czech', 'Japanese', 'Russian', 'Spanish', 'German', 'Maori', 'German', 'Kwangali', 'Norwegian', 'German', 'Italian', 'Japanese', 'Spanish', 'Indonesian', 'Urdu', 'Swedish', 'Yaghan', 'Arabic', 'Finnish', 'German');
+
+		//create an array for the definitions
+		var meaningBox=new Array( 'The space between your eyebrows', 'Your brother\'s brother-in-law', 'An afternoon snack — not a mid-morning one', 'When you more than like someone, but not quite love them — it\'s complicated, and doesn\'t literally translate to "I desire you"', 'A person that is cold all the time', 'What you are the day after you didn\'t get any sleep', 'The day before yesterday', 'The time spent chatting (chair dancing?) post-dinner while still at the table', 'That feeling you get in the back of your mouth when you\'ve had too much sugar and you immediately regret it', 'An unstructured mess', 'A gift presented to one\'s spouse by way of apology. Literally, dragon food', 'The perfect mixture of cosy, safe, warm, and comfortable', 'Feeling pressure to make a strategic move when you would rather do nothing', 'To make something worse in the very act of trying to improve it', 'The act of playing out an entire scenario in your mind. Literally, head cinema', 'The feeling of being ashamed on someone else\'s behalf', 'An intense yearning for something far-off and indefinable', 'A sense of litlessness brought on by the coming of Spring', 'Literally \'fingertip feeling\'. Intuitive empathy with things and people', 'Despair caused by the state of the world', 'An unrealistic dream. Literally an air castle', 'Things you should have said. Literally a staircase joke- w witty comeback you thought of too late', 'A longing for far-off places', 'Fear that time is running out to achieve life goals. Literally gate shutting panic', 'The chattering of teeth from the cold or from rage', 'A word made for walking in the woods at night, it’s the phantom sensation of something crawling on your skin.', 'Addicted to the infra-red glow of tanning salons? This word describes you.', 'The Yiddish have scores of words to describe social misfits. This one is for an impractical dreamer with no business sense. Literally, air person.',  'You know that feeling of anticipation when you’re waiting for someone to show up at your house and you keep going outside to see if they’re there yet? This is the word for it.', 'A word that would aptly describe the prevailing fashion trend among American men under 40, it means one who wears the shirt tail outside of his trousers.', 'It means to scratch your head in order to help you remember something you\'ve forgotten.', 'Meteorologists can be poets in Turkey with words like this at their disposal. It means moonlight shining on water.',  'A word tailor-made for annoying older brothers-- it means to jump out and say boo.', 'You know that old trick where you tap someone lightly on the opposite shoulder from behind to fool them? The Indonesians have a word for it.', 'To make a squeaking sound by sucking air past the lips in order to gain the attention of a dog or child.', 'A smile that is insincere or mocking. Literally, a blue smile.', 'The experience of seeing a woman who appears pretty from behind but not from the front.', 'It\'s nice to know that the Japanese think enough of the act of gazing vacantly into the distance without thinking to give it a name.', 'Excess weight gained from emotional overeating. Literally, grief bacon.', 'The sensation of being in another country.', 'The heart-wrenching pain of wanting someone you can’t have. Even a Sex in the City episode was named after it!', 'The literal translation is \'staircase wit\', but it means to think of a comeback when it\'s too late.', 'The happiness of meeting again after a long time.', ' An unexpected last-minute change of plans. A great excuse without having to be specific.', 'At its deepest and most painful, it is a sensation of great spiritual anguish, often without any specific cause. At less morbid levels it is a dull ache of the soul, a longing with nothing to long for, a sick pining, a vague restlessness, mental throes, yearning', 'The wordless, yet meaningful look shared by two people who both desire to initiate something but are both reluctant to start', 'A joke so poorly told and so unfunny that one cannot help but laugh', 'To go outside to check if anyone is coming', 'A mother who relentlessly pushes her children toward academic achievement', 'The act of hestitating while introducing someone because you’ve forgotten their name.', 'the stature of a person who is ready to forgive and forget any first abuse, tolerate it the second time, but never forgive nor tolerate on the third offense.', 'This word means to call a mobile phone and let it ring once so that the other person will call back, saving the first caller money.', 'The act of tenderly running one\'s fingers through someone\'s hair.', 'the feeling of pleasure derived by seeing another’s misfortune.', 'a way of living that focuses on finding beauty within the imperfections of life and accepting peacefully the natural cycle of growth and decay.', 'It comes from Easter Island and it means a person who borrows things from a friend’s house one by one until there is nothing left. ', 'Both morbid and beautiful at once, this incantatory word means “You bury me,” a declaration of one’s hope that they’ll die before another person because of how difficult it would be to live without them.', 'refers to the feeling of longing for something or someone that you love and which is lost', 'Literally, this  word means to walk in the wind, but in the more figurative (and commonly used) sense, it means to take a brief break in the country side to clear one’s head.', 'Zalatwic is a  term which, in one aspect does have a similar term in English (to do a cash job), but the Polish term means far more and is much more subtle. Zalatwic is the use of friends, bribes, personal charm or connections to get something done.', 'What do you normally do when you have a dispute? Do you talk things over? Go to court? Well, in New Guinea, to settle disputes, the people rely on biritululo. Biritululo is the act of comparing yams (and I am hoping that is meant in the literal sense) to settle a dispute.', 'People with the same name', 'Comfort and coziness of being at home, with friends, with loved ones, or general togetherness', 'The feeling of slight laziness, can\'t be bothered by anything. Don\'t want to work nor go anywhere', 'Homesickness tinged with grief or sadness over the lost or departed and the earnest desire for the Wales of the past' , 'A state of torment created by the sudden sight of one\'s own misery', 'The act of leaving a book unread after buying it, typically piling it up together with other unread books', 'A person who asks too many questions', 'A person who is especially sensitive to cold weather and temperatures', 'To feel homesick for a place you have never been to', 'to have one leg shorter than the other', 'The feeling of being alone in the woods', 'The act of walking on tiptoes across warm sand', 'To sit outside on a sunny day enjoying a beer', 'A feeling of solitude, being alone in the woods and a connectedness to nature', 'The mark left on a table by a cold glass', 'A word for when sunlight filters through the trees - the interplay between the light and the leaves', 'The period of time after a meal when you have food-induced conversations with the people you have shared the meal with', 'Slang for someone who tells a joke so badly, that is so unfunny you cannot help but laugh out loud', 'This word conveys a contemplative \'as-if\' that nonetheless feels like reality, and describes the suspension of disbelief that can occur, often through good storytelling', 'The glimmering, roadlike reflection that the moon creates on water', 'A look shared by two people, each wishing that the other will offer something that they both desire but are unwilling to suggest or offer themselves', 'The amount of water than can be held in one hand', 'The distance a reindeer can comfortably travel before taking a break', 'The gift a husband gives his wife when he’s trying to make up for bad behavior');
+		
+		// holder for the last word chosen
+		var lastim = -1;
+
+function chooseWord() {
+	// This function does all the work!
+
+	// temp flag
+	var done = 0;
+	
+	do {
+		// generate a random index for the arrays
+		var im = Math.floor(Math.random()*wordBox.length);
+		
+		// check if we have a new index (not used last time around)
+		if (im != lastim) {
+			// we are done, update the last word chosen
+			done=1;
+			lastim = im;
+		}
+	} while (done == 0);
+	
+	
+	// element in the doc to place our string
+	var disp = document.getElementById("gimme");
+	
+	//update the page content
+	disp.innerHTML = '<strong>' + wordBox[im] + '</strong><br />(' + langBox[im] + ') "' + meaningBox[im] + '"';
+	
+	
+	// now populate a hidden div to show 'em all on page load
+		output = '<h2>All the Words</h2><ol>';
+		
+		for (var i=0;i<wordBox.length;i++) {	
+			output += '<li><strong>' + wordBox[i] + '</strong> (' + langBox[i] + ') -- "' + meaningBox[i] + '"</li>';
+		}
+		
+		output += '</ol>';
+		
+		var disp = document.getElementById("showcase");
+		
+		disp.innerHTML =  output;
+		
+		 $('#showcase').hide();
+}
+
+function toggleVis() {
+	$('#showcase').slideToggle()
+}
+
+
+</script>
+	
+</head>	
+<body onLoad="chooseWord()">
+	<div id="stuff">
+		<h1></h1>
+		<p id="gimme"></p>
+		
+		
+		<form id="fbomb"><input type="button" value="Gimme Another" onClick="chooseWord()"> <input type="button" value="Show/Hide Words" id="shower" onClick="toggleVis('true')"> </form>
+		
+		
+		<div id="showcase">
+		
+		</div>
+		
+		<p class="small">
+		<strong>More:</strong><br />
+		&bull; <a href="http://www.mentalfloss.com/blogs/archives/94828">15 Wonderful Words With No English Equivalent</a> (Mental Floss)<br />
+		&bull; <a href="http://didisworld.wordpress.com/2011/02/27/french-words-with-no-english-translation/">French Words With No English Translation</a> (didi's World)<br />
+		&bull; <a href="http://matadornetwork.com/abroad/20-awesomely-untranslatable-words-from-around-the-world/">20 awesomely untranslatable words from around the world (matador abroad)</a><br />
+		&bull; <a href="http://listverse.com/2010/09/23/10-words-that-cant-be-translated-to-english/">10 Words That Can't Be Translated into English</a> (Listverse)<br />
+		&bull; 	<a href="http://www.popsci.com/science/article/2013-01/emotions-which-there-are-no-english-words-infographic">21 Emotions For Which There Are No English Words</a> (popsci)<br />
+		&bull;	<a href="http://twistedsifter.com/2014/05/words-with-no-direct-english-equivalent/">15 Words in Other Languages with No Direct English Equivalent</a> (twisted sifter)<br />
+		
+		&bull;	 <a href="http://blog.maptia.com/posts/untranslatable-words-from-other-cultures">11 Untranslatable Words From Other Cultures</a> (maptia)<br />
+		&bull;	 <a href="http://qz.com/396076/tretar-tsundoku-jugaad-and-other-useful-but-untranslatable-words-from-around-the-world/">Fantastic words with no easy translation in other languagess</a> (quartz)<br />
+		&bull;	 <a href="http://languagelog.ldc.upenn.edu/nll/?p=2741">Translating the Untranslatable</a> (Language Log)<br />
+		&bull; <a href="https://www.buzzfeed.com/lukelewis/german-words?utm_term=.vnzw93gEoL#.eh1vWMy2gw">21 Perfect German Words We Need In English</a> (BuzzFeed)<br />
+		
+		&bull;  <a href="https://www.popsugar.com/latina/Spanish-Words-English-Translation-42033885">13 Words in Spanish That Don't Have an English Equivalent — So Frustrating!</a> (Popsugar)<br />
+		
+		
+		
+		<br /><a title="Lost In Translation" href="http://flickr.com/photos/tochis/3081093838/">cc licensed ( BY NC )  flickr photo</a> shared by <a href="http://flickr.com/people/tochis/">tochis</a><br /><br />
+		Take the <a href="http://assignments.ds106.us/assignments/make-the-untranslatable-understood/">ds106 challenge to illustrate one of these words using images</a>!</p>
+		
+	</div>
+	
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="jquery.backstretch.min.js"></script>
+	<script>
+	    $.backstretch(["translate.jpg"]);
+	
+		$("#stuff h1").text( wordBox.length + ' Words With No English Equivalents');
+
+	    
+  	</script>
+</body>	
+</html>
